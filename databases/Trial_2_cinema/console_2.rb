@@ -9,7 +9,19 @@ Ticket.delete_all()
 Screening.delete_all()
 Customer.delete_all()
 Film.delete_all()
-# deletes previous entries so there is no unrequired duplication. 
+# deletes previous entries so there is no unrequired duplication.
+
+# This is a seeds file that puts the initial data into the database
+# To set up the database you must create one: - createdb dbname
+# then create the sql file that determines which data comes from where
+# This is the sql file, then run the psql -d cinema -f cinema.sql
+# command in the command line, this creates the tables.
+# Then ruby run this file to populate with initial data. It will require the
+# classes to be created in the model files first.
+# To view the data bases, press command t, then type psql, followed by \c cinema
+# This connects to the database then SELECT * FROM customers; (or any table)
+# This will return the data if all set up correctly. 
+
 customer1 = Customer.new({'name' => 'Egon', 'funds' => 250.00})
 customer1.save()
 customer2 = Customer.new({'name' => 'Ray', 'funds' => 200.00})
